@@ -14,17 +14,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
 </head>
 
+
 <body>
     <h1>Logo Color Tool</h1>
     <a class="btn btn-success btn-gradient" href="javascript:void(0);"
         onclick="generateScreenshot();"><span>Download</span></a>
     <div class="color">
-        Pick logo color <input onchange="logoColorSelected(this)" type="color">
+        <label for="color-1"> Pick logo color</label> <input onchange="logoColorSelected(this)" type="color"
+            id="color-1" class="color1" name="color1" value="#D4AF37">
+        <span>#<span id="label-1" contenteditable="true">D4AF37</span></span>
     </div>
     <div class="color">
-        Pick text color <input onchange="textColorSelected(this)" type="color">
-    </div>
+        <label for="color-2"> Pick text color </label>
+        <input onchange="textColorSelected(this)" type="color" id="color-2" class="color2" name="color2"
+            value="#ffffff">
+        <span>#<span id="label-2" contenteditable="true">ffffff</span></span>
 
+    </div>
+    <input type="file" id="filetag">
+
+    <br>
     <div id="wrapper" class="box">
         <!-- <img src="x.png" alt="" width="100%"> -->
         <svg id="downloadme" width="456" height="163" viewBox="0 0 456 163" fill="none"
@@ -49,6 +58,10 @@
                 fill="#D4AF37" stroke="#D4AF37" />
         </svg>
 
+    </div>
+    <div id="move">
+        <img src="cancel.png" alt="" width="50px" class="cancel" onclick="hidestuff();">
+        <img src="" id="preview">
     </div>
 
     <script src="script.js"></script>
@@ -80,7 +93,6 @@
 
 
     </script>
-
 </body>
 
 </html>
